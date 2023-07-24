@@ -12,16 +12,29 @@
                             </button>
                         </div>
                     </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('medicamento.store') }}" enctype="multipart/form-data">
-                            {{ csrf_field() }}
+                            @csrf
                             <div class="form-group">
                                 <label for="inputNombre">Nombre del medicamento</label>
                                 <input type="text" id="inputNombre" name="nombre" value="{{ old('nombre') }}" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="inputDetalles">Detalles</label>
-                                <textarea id="inputDetalles" name="detalles" value="{{ old('detalles') }}" class="form-control" rows="4"></textarea>
+                                <textarea id="inputDetalles" name="detalles" class="form-control" rows="4">{{ old('detalles') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="inputFechaVencimiento">Fecha de vencimiento</label>
@@ -54,12 +67,14 @@
                             <input type="text" id="inputRegistroInvima" name="registro_invima" value="{{ old('registro_invima') }}" class="form-control">
                         </div>
                         <div class="form-group">
-                            
-                                <input type="file" class="custom-file-input" id="customFile" name="imagen" value="{{ old('imagen') }}">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                              </div>
+                            <label for="inputImagen">Imagen</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputImagen" name="imagen">
+                                    <label class="custom-file-label" for="inputImagen">Choose file</label>
+                                </div>
                             </div>
-                             </div>
+                        </div>
                         <div class="form-group">
                             <label for="inputPrecio">Precio</label>
                             <input type="number" id="inputPrecio" name="precio" value="{{ old('precio') }}" class="form-control">
@@ -92,6 +107,7 @@
         </div>
     </section>
 @endsection
+
 @push('scripts')
 <script src="{{asset('backend/vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
 <script src="{{asset('backend/summernote/summernote.min.js')}}"></script>
@@ -99,11 +115,12 @@
     $('#lfm').filemanager('image');
 
     $(document).ready(function() {
-    $('#description').summernote({
-      placeholder: "Write short description.....",
-        tabsize: 2,
-        height: 150
-    });
+        $('#inputDetalles').summernote({
+            placeholder: "Write short description.....",
+            tabsize: 2,
+            height: 150
+        });
     });
 </script>
 @endpush
+

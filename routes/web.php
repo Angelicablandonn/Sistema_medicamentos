@@ -27,6 +27,7 @@ Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
     Route::get('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 //medicamentos
     Route::resource('/medicamento', App\Http\Controllers\MedicamentosController::class);
+    Route::resource('/users', App\Http\Controllers\UsersController::class);
 
 
 
