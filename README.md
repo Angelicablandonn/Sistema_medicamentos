@@ -1,3 +1,18 @@
+## Orientaciones Generales
+
+En la raiz del proyecto se encuentra el archivo database.txt. Con toda la información de la base de datos que se debe usar para que el proyecto funcione. 
+
+1. Requisitos: Tener PHP 8.0 o Superior, Composer Instalado en el Dispositivo, NodeJS, XAMPP y MARIADB.
+2. Para correr el proyecto por primera vez, ejecutar en la ventana de la terminal dentro de la raiz del proyecto: 
+```bash
+composer install 
+```
+3. Luego que termine de descargar e instalar todas  las dependencias ejecutar el comando:
+```bash
+php artisan serve
+```
+o en su defecto, pasar el proyecto a la carpeta de proyecto XAMPP (Por defecto htdocs), correr el apache desde ahí y luego abrir el sitio WEB.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +79,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+

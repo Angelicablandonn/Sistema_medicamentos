@@ -10,12 +10,12 @@
             <div class="inner">
               <h3>150</h3>
 
-              <p>New Orders</p>
+              <p>Nuevas Ordenes</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Mas Informacion <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -25,12 +25,12 @@
             <div class="inner">
               <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Bounce Rate</p>
+              <p>Porcentaje de Ventas</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Mas Informacion <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -40,12 +40,12 @@
             <div class="inner">
               <h3>44</h3>
 
-              <p>User Registrations</p>
+              <p>Usuarios Registrados</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Mas Informacion <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -55,12 +55,12 @@
             <div class="inner">
               <h3>65</h3>
 
-              <p>Unique Visitors</p>
+              <p>Venta de Productos</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Mas Informacion <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -75,15 +75,15 @@
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-chart-pie mr-1"></i>
-                Sales
+                Descuentos
               </h3>
               <div class="card-tools">
                 <ul class="nav nav-pills ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
+                    <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Tipo Area</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
+                    <a class="nav-link" href="#sales-chart" data-toggle="tab">Tipo Donut</a>
                   </li>
                 </ul>
               </div>
@@ -106,7 +106,7 @@
           <!-- DIRECT CHAT -->
           <div class="card direct-chat direct-chat-primary">
             <div class="card-header">
-              <h3 class="card-title">Direct Chat</h3>
+              <h3 class="card-title">Chat Directo</h3>
 
               <div class="card-tools">
                 <span title="3 New Messages" class="badge badge-primary">3</span>
@@ -132,10 +132,10 @@
                     <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="{{ asset('images/profile_s.png') }}" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
-                    Is this template really for free? That's unbelievable!
+                    Esto es increible
                   </div>
                   <!-- /.direct-chat-text -->
                 </div>
@@ -148,10 +148,10 @@
                     <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="{{ asset('images/profile_s.png') }}" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
-                    You better believe it!
+                    Ustedes son lo mejor
                   </div>
                   <!-- /.direct-chat-text -->
                 </div>
@@ -164,10 +164,10 @@
                     <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="{{ asset('images/profile_s.png') }}" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
-                    Working with AdminLTE on a great new app! Wanna join?
+                    Sigan realizando este servicio
                   </div>
                   <!-- /.direct-chat-text -->
                 </div>
@@ -180,10 +180,10 @@
                     <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                  <img class="direct-chat-img" src="{{ asset('images/profile_s.png') }}" alt="message user image">
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
-                    I would love to.
+                    Me gustaria hacer esto
                   </div>
                   <!-- /.direct-chat-text -->
                 </div>
@@ -197,14 +197,14 @@
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           Count Dracula
-                          <small class="contacts-list-date float-right">2/28/2015</small>
+                          <small class="contacts-list-date float-right">2/28/2023</small>
                         </span>
-                        <span class="contacts-list-msg">How have you been? I was...</span>
+                        <span class="contacts-list-msg">Me gustaria que añadan mas productos</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -212,14 +212,14 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user7-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           Sarah Doe
-                          <small class="contacts-list-date float-right">2/23/2015</small>
+                          <small class="contacts-list-date float-right">2/23/2023</small>
                         </span>
-                        <span class="contacts-list-msg">I will be waiting for...</span>
+                        <span class="contacts-list-msg">A la espera de las rebajas</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -227,14 +227,14 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user3-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           Nadia Jolie
-                          <small class="contacts-list-date float-right">2/20/2015</small>
+                          <small class="contacts-list-date float-right">2/20/2023</small>
                         </span>
-                        <span class="contacts-list-msg">I'll call you back at...</span>
+                        <span class="contacts-list-msg">Sus pedidos son muy rapidos, 5 estrellas</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -242,14 +242,14 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user5-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           Nora S. Vans
-                          <small class="contacts-list-date float-right">2/10/2015</small>
+                          <small class="contacts-list-date float-right">2/10/2023</small>
                         </span>
-                        <span class="contacts-list-msg">Where is your new...</span>
+                        <span class="contacts-list-msg">Cual es su sede  principal?</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -257,14 +257,14 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user6-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           John K.
-                          <small class="contacts-list-date float-right">1/27/2015</small>
+                          <small class="contacts-list-date float-right">1/27/2023</small>
                         </span>
-                        <span class="contacts-list-msg">Can I take a look at...</span>
+                        <span class="contacts-list-msg">Podría tomarlos</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -272,14 +272,14 @@
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img class="contacts-list-img" src="dist/img/user8-128x128.jpg" alt="User Avatar">
+                      <img class="contacts-list-img" src="{{ asset('images/profile_s.png') }}" alt="User Avatar">
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
                           Kenneth M.
-                          <small class="contacts-list-date float-right">1/4/2015</small>
+                          <small class="contacts-list-date float-right">1/4/2023</small>
                         </span>
-                        <span class="contacts-list-msg">Never mind I found...</span>
+                        <span class="contacts-list-msg">Nunca pense que lo encontraria</span>
                       </div>
                       <!-- /.contacts-list-info -->
                     </a>
@@ -296,7 +296,7 @@
                 <div class="input-group">
                   <input type="text" name="message" placeholder="Type Message ..." class="form-control">
                   <span class="input-group-append">
-                    <button type="button" class="btn btn-primary">Send</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
                   </span>
                 </div>
               </form>
@@ -310,7 +310,7 @@
             <div class="card-header">
               <h3 class="card-title">
                 <i class="ion ion-clipboard mr-1"></i>
-                To Do List
+               Lista de Tareas
               </h3>
 
               <div class="card-tools">
@@ -338,7 +338,7 @@
                     <label for="todoCheck1"></label>
                   </div>
                   <!-- todo text -->
-                  <span class="text">Design a nice theme</span>
+                  <span class="text">Rellenar el Stock de Productos</span>
                   <!-- Emphasis label -->
                   <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                   <!-- General tools such as edit or delete-->
@@ -356,8 +356,8 @@
                     <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
                     <label for="todoCheck2"></label>
                   </div>
-                  <span class="text">Make the theme responsive</span>
-                  <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                  <span class="text">Pagar a los proveedores</span>
+                  <small class="badge badge-info"><i class="far fa-clock"></i> 4 horas</small>
                   <div class="tools">
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-o"></i>
@@ -372,8 +372,8 @@
                     <input type="checkbox" value="" name="todo3" id="todoCheck3">
                     <label for="todoCheck3"></label>
                   </div>
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                  <span class="text">Retroalimentación de Clientes</span>
+                  <small class="badge badge-warning"><i class="far fa-clock"></i> 1 dia</small>
                   <div class="tools">
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-o"></i>
@@ -388,8 +388,8 @@
                     <input type="checkbox" value="" name="todo4" id="todoCheck4">
                     <label for="todoCheck4"></label>
                   </div>
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
+                  <span class="text">Mantenimiento General  de los Servicios Web</span>
+                  <small class="badge badge-success"><i class="far fa-clock"></i> 3 dias</small>
                   <div class="tools">
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-o"></i>
@@ -404,8 +404,8 @@
                     <input type="checkbox" value="" name="todo5" id="todoCheck5">
                     <label for="todoCheck5"></label>
                   </div>
-                  <span class="text">Check your messages and notifications</span>
-                  <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
+                  <span class="text">Chequear  mensajes y notifcaciones</span>
+                  <small class="badge badge-primary"><i class="far fa-clock"></i> 1 semana</small>
                   <div class="tools">
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-o"></i>
@@ -420,8 +420,8 @@
                     <input type="checkbox" value="" name="todo6" id="todoCheck6">
                     <label for="todoCheck6"></label>
                   </div>
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
+                  <span class="text">Designar reponsabilidades de administracion</span>
+                  <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 mes</small>
                   <div class="tools">
                     <i class="fas fa-edit"></i>
                     <i class="fas fa-trash-o"></i>
@@ -431,7 +431,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-              <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add item</button>
+              <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Añadir tarea</button>
             </div>
           </div>
           <!-- /.card -->
@@ -442,41 +442,23 @@
 
           <!-- Map card -->
           <div class="card bg-gradient-primary">
-            <div class="card-header border-0">
-              <h3 class="card-title">
-                <i class="fas fa-map-marker-alt mr-1"></i>
-                Visitors
-              </h3>
-              <!-- card tools -->
-              <div class="card-tools">
-                <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                  <i class="far fa-calendar-alt"></i>
-                </button>
-                <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-              <!-- /.card-tools -->
-            </div>
-            <div class="card-body">
-              <div id="world-map" style="height: 250px; width: 100%;"></div>
-            </div>
+        
             <!-- /.card-body-->
             <div class="card-footer bg-transparent">
               <div class="row">
                 <div class="col-4 text-center">
                   <div id="sparkline-1"></div>
-                  <div class="text-white">Visitors</div>
+                  <div class="text-white">Visitantes</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
                   <div id="sparkline-2"></div>
-                  <div class="text-white">Online</div>
+                  <div class="text-white">En linea</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
                   <div id="sparkline-3"></div>
-                  <div class="text-white">Sales</div>
+                  <div class="text-white">Descuentos</div>
                 </div>
                 <!-- ./col -->
               </div>
@@ -490,7 +472,7 @@
             <div class="card-header border-0">
               <h3 class="card-title">
                 <i class="fas fa-th mr-1"></i>
-                Sales Graph
+                Grafico de Ventas
               </h3>
 
               <div class="card-tools">
@@ -512,21 +494,21 @@
                   <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
                          data-fgColor="#39CCCC">
 
-                  <div class="text-white">Mail-Orders</div>
+                  <div class="text-white">Correo de Ordenes</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
                   <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
                          data-fgColor="#39CCCC">
 
-                  <div class="text-white">Online</div>
+                  <div class="text-white">En linea</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-4 text-center">
                   <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
                          data-fgColor="#39CCCC">
 
-                  <div class="text-white">In-Store</div>
+                  <div class="text-white">En tienda</div>
                 </div>
                 <!-- ./col -->
               </div>
@@ -542,7 +524,7 @@
 
               <h3 class="card-title">
                 <i class="far fa-calendar-alt"></i>
-                Calendar
+                Calendario
               </h3>
               <!-- tools card -->
               <div class="card-tools">
@@ -552,10 +534,10 @@
                     <i class="fas fa-bars"></i>
                   </button>
                   <div class="dropdown-menu" role="menu">
-                    <a href="#" class="dropdown-item">Add new event</a>
-                    <a href="#" class="dropdown-item">Clear events</a>
+                    <a href="#" class="dropdown-item">Añadir Evento</a>
+                    <a href="#" class="dropdown-item">Limpiar Eventos</a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">View calendar</a>
+                    <a href="#" class="dropdown-item">Mirar Calendario</a>
                   </div>
                 </div>
                 <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
