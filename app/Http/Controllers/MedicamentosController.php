@@ -139,7 +139,7 @@ class MedicamentosController extends Controller
             'fecha_vencimiento' => 'required|date',
             'status' => 'required|in:active,inactive',
             'registro_invima' => 'required|string|max:255',
-            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+
             'precio' => 'required|numeric',
             'cantidad' => 'required|integer|min:0',
             'lote' => 'required|string',

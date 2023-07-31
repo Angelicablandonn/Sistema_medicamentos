@@ -89,29 +89,18 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{{route('pedidos.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
+                  <p>Listar pedidos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="{{route('pedidos.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
+                  <p>Crear pedidos</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
-                </a>
-              </li>
+
             </ul>
           </li>
 

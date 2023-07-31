@@ -5,14 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Medicamento extends Model
+class Pedido extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'nombre','detalles','slug','fecha_vencimiento','lote','registro_invima','imagen','precio','status','cantidad'];
-        public function pedidos()
+        'medicamento_id','cantidad','precio_unitario','total', 'fecha_venta', 'nombre_medicamento'];
+
+
+        public function medicamentos()
         {
-            return $this->belongsToMany(Pedido::class)
+            return $this->belongsToMany(Medicamento::class)
                 ->withPivot(['cantidad', 'precio_unitario', 'total']);
         }
 }
+
+
