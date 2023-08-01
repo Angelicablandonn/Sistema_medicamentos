@@ -28,6 +28,8 @@ Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
 //medicamentos
     Route::resource('/medicamento', App\Http\Controllers\MedicamentosController::class);
     Route::resource('/users', App\Http\Controllers\UsersController::class);
+    Route::resource('/pedidos', App\Http\Controllers\PedidoController::class);
+    Route::resource('/ventas', App\Http\Controllers\VentaController::class);
 
 
 
