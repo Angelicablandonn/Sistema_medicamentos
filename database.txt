@@ -211,3 +211,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (54, 'Camil', 'camil@gmail.com', NULL, '$2y$10$w.SbzeJrYSVra9YDmQzxz.Tk11sWzFHHJjSD3mqLM4mEBtHnu3xky', 'customer', 'active', NULL, '2023-07-24 23:32:44', '2023-07-24 23:32:44'),
 (55, 'Camil', 'camilo@gmail.com', '2023-07-24 23:36:08', '$2y$10$vMGXz8UOrCsjkQ6Mp8jxnu1KIr6eOfe.sUSjoSTy6k6G7tdl1cVru', 'customer', 'active', '', '2023-07-24 23:36:08', '2023-07-24 23:36:08');
 COMMIT;
+
+
+
+
+

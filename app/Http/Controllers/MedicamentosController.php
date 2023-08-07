@@ -16,6 +16,15 @@ class MedicamentosController extends Controller
         $medicamentos=Medicamento::orderBy('id')->get();
         return view('backend.medicamento.index',compact('medicamentos'));
     }
+    public function list()
+    {
+        try {
+            $medicamentos = Medicamento::all();
+            return response()->json($medicamentos);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Error al obtener los medicamentos'], 500);
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

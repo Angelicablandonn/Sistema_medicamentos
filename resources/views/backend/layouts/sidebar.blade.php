@@ -37,7 +37,7 @@
 
                 <!-- Facturación -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('facturas.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-invoice"></i>
                         <p>Facturación</p>
                         <span class="right badge badge-danger">Nuevo</span>
