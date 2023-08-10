@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 @section('content')
 @vite("resources/js/app.js")
-
+@include('backend/layouts/notificacion')
    <!-- <div class="row mx-2">
         <div class="col-8 text-center">
             <div class="card">

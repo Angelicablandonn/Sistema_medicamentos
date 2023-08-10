@@ -1,6 +1,7 @@
 @extends('backend.layouts.master')
+
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
+
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Lista de Ventas</h3>
@@ -23,7 +24,7 @@
                             <td>{{ $venta->id }}</td>
                             <td>{{ $venta->productos }}</td>
                             <td>{{ $venta->total }}</td>
-                            <td>{{ $venta->fecha_venta }}</td>
+                            <td>{{ $venta->created_at }}</td>
 
                         </tr>
                     @endforeach

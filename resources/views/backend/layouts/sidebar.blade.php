@@ -49,6 +49,7 @@
                     <a href="{{ route('ventas.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-shopping-cart"></i>
                         <p>Ventas</p>
+                        <span class="right badge badge-danger">Nuevo</span>
                     </a>
                 </li>
 
