@@ -49,15 +49,32 @@ const Carrito = () => {
   };
 
   const handleConfirmarCompra = () => {
-    axios.post('/registrar-compra', { medicamentos: compra })
+    const totalCompra = calcularSubtotalTotal(); // Obtener el subtotal total de la compra
+    if (compra.length === 0) {
+      console.error('No hay medicamentos en la compra.');
+      return;
+    }
+  
+    axios.post('./registrar-compra', { medicamentos: compra, total: totalCompra })
       .then((response) => {
         console.log(response.data.message); // Mensaje de éxito de la compra
+          // Actualizar la cantidad de los medicamentos en el estado local
+      const updatedMedicamentos = [...medicamentos];
+      compra.forEach((medicamentoCompra) => {
+        const index = updatedMedicamentos.findIndex((medicamento) => medicamento.id === medicamentoCompra.id);
+        if (index !== -1) {
+          updatedMedicamentos[index].cantidad -= medicamentoCompra.cantidad;
+        }
+      });
+      setMedicamentos(updatedMedicamentos);
         setCompra([]); // Limpiar el carrito localmente después de confirmar la compra
+        window.location.reload(); 
       })
       .catch((error) => {
         console.error('Error al registrar la compra:', error);
       });
   };
+  
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -93,13 +110,13 @@ const Carrito = () => {
             <div className="row">
             {filteredMedicamentos.map((medicamento) => (
                 <div key={medicamento.id} className="col-3 mx-4">
-                  <div className="card" style={{ height: '18rem' }}>
+                  <div className="card" style={{ height: '20rem' }}>
                     {/* Lógica para mostrar la imagen del medicamento */}
                     {medicamento.imagen ? (
                       <img
                         src={`${baseUrl}/images/${medicamento.imagen}`}
                         className="img-fluid zoom"
-                        style={{ maxWidth: '100%' }}
+                        style={{ maxWidth: '100%', maxHeight: '40%' }}
                         alt="Medicamento Imagen"
                       />
                     ) : (
@@ -130,7 +147,7 @@ const Carrito = () => {
       <div className="col-5 text-center">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">Compra</h3>
+            <h3 className="card-title">Venta</h3>
           </div>
           <div className="card-body">
             <ul className='list-group'>
@@ -158,8 +175,8 @@ const Carrito = () => {
                 </li>
               ))}
             </ul>
-            <h5>Subtotal: ${calcularSubtotalTotal()}</h5>
-            <button className='my-3 btn btn-primary' onClick={handleConfirmarCompra}>Confirmar Compra</button>
+            <h5 className='my-4 '>Total: ${calcularSubtotalTotal()}</h5>
+            <button className='btn btn-primary' onClick={handleConfirmarCompra}>Confirmar Compra</button>
           </div>
         </div>
       </div>

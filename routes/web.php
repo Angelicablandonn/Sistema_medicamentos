@@ -34,6 +34,7 @@ Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
     Route::resource('/ventas', App\Http\Controllers\VentaController::class);
     Route::resource('/facturas', App\Http\Controllers\SistemaFactura::class);
     Route::get('/medicamentos',[App\Http\Controllers\MedicamentosController::class, 'list']); // Obtener los medicamentos
+    Route::post('/registrar-compra',[App\Http\Controllers\MedicamentosController::class, 'confirmarCompra']); 
 
 
 
