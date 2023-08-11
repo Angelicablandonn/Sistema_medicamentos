@@ -4,11 +4,8 @@
         @include('frontend.layouts.head')
     </head>
 
-
-
-
   <!-- Navbar -->
-  @include('frontend.layouts.nav')
+  @include('frontend.layouts.header')
   <!-- /.navbar -->
 
 

@@ -1,5 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
+
    <!-- banner part start-->
    <section class="banner_part">
     <div class="container">
@@ -7,13 +8,11 @@
             <div class="col-lg-5 col-xl-5">
                 <div class="banner_text">
                     <div class="banner_text_iner">
-                        <h5>We are here for your care</h5>
-                        <h1>Best Care &
-                            Better Doctor</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
-                        <a href="#" class="btn_2">Make an appointment</a>
+
+                        <h5>Tu salud es nuestra prioridad</h5>
+                        <h1>Droguería La Economía</h1>
+                        <p>En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un servicio excepcional. Cuidamos de ti y tu familia.</p>
+                        <a href="#" class="btn_2">Comprar medicamentos</a>
 
                     </div>
                 </div>
@@ -28,32 +27,45 @@
 </section>
 <!-- banner part start-->
 <!-- ... (código anterior) ... -->
-
-<!-- banner part start-->
-<section class="banner_part">
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col-lg-5 col-xl-5">
-            <div class="banner_text">
-                <div class="banner_text_iner">
-                    <h5>We are here for your care</h5>
-                    <h1>Best Care & Better Doctor</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
-                    <a href="#" class="btn_2">Make an appointment</a>
+<!-- Medicamentos section start -->
+<section class="medicamentos_section section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_tittle text-center">
+                    <h2>Nuestros Medicamentos</h2>
                 </div>
             </div>
         </div>
-        <div class="col-lg-7">
-            <div class="banner_img">
-                <img src="{{ asset('frontend/img/banner_img.png') }}" alt="">
+        <div class="row">
+            @foreach($medicamentos as $medicamento)
+            <div class="col-md-4 mb-4">
+                <div class="medicamento_card">
+                    <div class="medicamento_image">
+                        @if($medicamento->imagen)
+                        <img src="{{ asset('images/' . $medicamento->imagen) }}" class="img-fluid" alt="Medicamento Imagen">
+                        @else
+                        <img src="{{ asset('backend/img/thumbnail-default.jpg') }}" class="img-fluid" alt="avatar.png">
+                        @endif
+                    </div>
+                    <div class="medicamento_info">
+                        <h3>{{ $medicamento->nombre }}</h3>
+                        <p>{{ $medicamento->detalles }}</p>
+                        <span class="badge {{ $medicamento->status == 'active' ? 'badge-success' : 'badge-warning' }}">{{ $medicamento->status }}</span>
+                        <p class="precio">${{ $medicamento->precio }}</p>
+                    </div>
+                    <div class="medicamento_actions">
+                        <a href="{{ route('medicamento.edit', $medicamento->id) }}" class="btn btn-primary btn-sm">Ver Detalles</a>
+                        <!-- Agregar aquí el enlace a la página de compra o carrito -->
+                    </div>
+                </div>
             </div>
+            @endforeach
         </div>
     </div>
-</div>
 </section>
-<!-- banner part start-->
+<!-- Medicamentos section end -->
+
 
 <!-- about us part start-->
 <section class="about_us padding_top">

@@ -14,14 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes(['register'=>false]);
+Route::get('user/login', 'HomeController@login')->name('login.form');
+Route::post('user/login', 'HomeController@loginSubmit')->name('login.submit');
+Route::get('user/logout', 'HomeController@logout')->name('user.logout');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('user/register', 'HomeController@register')->name('register.form');
+Route::post('user/register', 'HomeController@registerSubmit')->name('register.submit');
+// Reset password
+Route::post('password-reset', 'HomeController@showResetForm')->name('password.reset');
+// Socialite
+Route::get('login/{provider}/', 'Auth\LoginController@redirect')->name('login.redirect');
+Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name('login.callback');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 
 //Admin dashboard
@@ -34,7 +44,7 @@ Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
     Route::resource('/ventas', App\Http\Controllers\VentaController::class);
     Route::resource('/facturas', App\Http\Controllers\SistemaFactura::class);
     Route::get('/medicamentos',[App\Http\Controllers\MedicamentosController::class, 'list']); // Obtener los medicamentos
-    Route::post('/registrar-compra',[App\Http\Controllers\MedicamentosController::class, 'confirmarCompra']); 
+    Route::post('/registrar-compra',[App\Http\Controllers\MedicamentosController::class, 'confirmarCompra']);
 
 
 
