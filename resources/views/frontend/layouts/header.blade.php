@@ -1,3 +1,7 @@
+
+
+
+<!-- Encabezado -->
 <header class="main_menu home_menu">
     <div class="container">
         <div class="row align-items-center">
@@ -23,16 +27,35 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Doctor.html">Medicamentos</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">Blog</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <!-- Opciones del menú desplegable aquí -->
-                                </div>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contacto</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth()->user()->name }}</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="">
+                                        <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cambiar contraseña
+                                    </a>
+                                    <a class="dropdown-item" href="">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Configurar cuenta
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        {{ __('Cerrar sesión') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -42,6 +65,9 @@
         </div>
     </div>
 </header>
+
+
+
 <style>
     .logo-img {
         max-width: 300px; /* Ajusta el tamaño del logo según tus preferencias */

@@ -1,70 +1,8 @@
-@extends('frontend.layouts.master')
-@section('content')
 
-   <!-- banner part start-->
-   <section class="banner_part">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-xl-5">
-                <div class="banner_text">
-                    <div class="banner_text_iner">
-
-                        <h5>Tu salud es nuestra prioridad</h5>
-                        <h1>Droguería La Economía</h1>
-                        <p>En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un servicio excepcional. Cuidamos de ti y tu familia.</p>
-                        <a href="#" class="btn_2">Comprar medicamentos</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="banner_img">
-                    <img src="{{ asset('frontend/img/banner_img.png')}}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- banner part start-->
 <!-- ... (código anterior) ... -->
 <!-- Medicamentos section start -->
-<section class="medicamentos_section section_padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section_tittle text-center">
-                    <h2>Nuestros Medicamentos</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @foreach($medicamentos as $medicamento)
-            <div class="col-md-4 mb-4">
-                <div class="medicamento_card">
-                    <div class="medicamento_image">
-                        @if($medicamento->imagen)
-                        <img src="{{ asset('images/' . $medicamento->imagen) }}" class="img-fluid" alt="Medicamento Imagen">
-                        @else
-                        <img src="{{ asset('backend/img/thumbnail-default.jpg') }}" class="img-fluid" alt="avatar.png">
-                        @endif
-                    </div>
-                    <div class="medicamento_info">
-                        <h3>{{ $medicamento->nombre }}</h3>
-                        <p>{{ $medicamento->detalles }}</p>
-                        <span class="badge {{ $medicamento->status == 'active' ? 'badge-success' : 'badge-warning' }}">{{ $medicamento->status }}</span>
-                        <p class="precio">${{ $medicamento->precio }}</p>
-                    </div>
-                    <div class="medicamento_actions">
-                        <a href="{{ route('medicamento.edit', $medicamento->id) }}" class="btn btn-primary btn-sm">Ver Detalles</a>
-                        <!-- Agregar aquí el enlace a la página de compra o carrito -->
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-<!-- Medicamentos section end -->
+
 
 
 <!-- about us part start-->
@@ -221,44 +159,7 @@
 <!-- our depertment part end-->
 
 
-<!--::doctor_part start::-->
-<section class="doctor_part section_padding">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-xl-8">
-            <div class="section_tittle text-center">
-                <h2>Experienced Doctors</h2>
-                <p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 col-lg-3">
-            <div class="single_blog_item">
-                <div class="single_blog_img">
-                    <img src="{{ asset('frontend/img/doctor/doctor_1.png') }}" alt="doctor">
-                    <div class="social_icon">
-                        <ul>
-                            <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                            <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                            <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                            <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="single_text">
-                    <div class="single_blog_text">
-                        <h3>DR Adam Billiard</h3>
-                        <p>Heart specialist</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Repeat the same structure for other doctors -->
-    </div>
-</div>
-</section>
-<!--::doctor_part end::-->
+
 
 
 <!--::regervation_part start::-->
@@ -370,5 +271,25 @@
     </div>
 </div>
 </section>
+<style>
+ .medicamento-img {
+            max-width: 100%;
+            height: 150px; /* Establece la altura fija */
+            object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+        }
+        .btn-agregar-carrito {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn-agregar-carrito i {
+            margin-right: 5px;
+        }
+</style>
 <!--::blog_part end::-->
 @endsection

@@ -38,6 +38,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
     Route::get('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 //medicamentos
+    Route::resource('/banner', App\Http\Controllers\BannerController::class);
     Route::resource('/medicamento', App\Http\Controllers\MedicamentosController::class);
     Route::resource('/users', App\Http\Controllers\UsersController::class);
     Route::resource('/pedidos', App\Http\Controllers\PedidoController::class);
