@@ -34,6 +34,7 @@ Route::get('login/{provider}/callback/', 'Auth\LoginController@Callback')->name(
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 
+
 //Admin dashboard
 Route::group(['prefix'=>'admin/','middleware'=>'auth'],function(){
     Route::get('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('admin');

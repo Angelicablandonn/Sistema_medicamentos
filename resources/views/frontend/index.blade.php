@@ -1,4 +1,101 @@
+@extends('frontend.layouts.master')
+@section('content')
+<!-- Sección de Medicamentos -->
+<section class="doctor_part section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section_tittle text-center">
+                    <h2>Medicamentos</h2>
+                    <p>En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un servicio excepcional. Cuidamos de ti y tu familia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach($medicamentos as $medicamento)
+            <div class="col-sm-6 col-lg-3">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        @if($medicamento->imagen)
+                        <img src="{{ asset('images/' . $medicamento->imagen) }}" class="medicamento-img" alt="Imagen del Medicamento">
+                        @else
+                        <img src="{{ asset('backend/img/thumbnail-default.jpg') }}" class="medicamento-img" alt="Imagen por Defecto">
+                        @endif
+                        <div class="social_icon">
+                            <ul>
 
+                                <li>  <a href="#" data-toggle="modal" data-target="#detalleModal{{$medicamento->id}}">
+                                    <i class="ti-shopping-cart"></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single_text">
+                        <div class="single_blog_text">
+                            <h3>{{ $medicamento->nombre }}</h3>
+                            <p>{{ $medicamento->detalles }}</p>
+                            <span class="badge {{ $medicamento->status == 'active' ? 'badge-success' : 'badge-warning' }}">{{ $medicamento->status }}</span>
+                            <p class="precio">${{ $medicamento->precio }}</p>
+
+
+                        </div>
+                    </div>
+                    <div class="modal fade" id="detalleModal{{$medicamento->id}}" tabindex="-1" role="dialog" aria-labelledby="detalleModalLabel{{$medicamento->id}}" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="detalleModalLabel{{$medicamento->id}}">{{$medicamento->nombre}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>{{$medicamento->detalles}}</p>
+                                    <p class="precio"><strong>Precio:</strong> ${{$medicamento->precio}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <a href="{{ route('pedidos.create'), $medicamento->id}}" class="btn btn-success">
+                                            <i class="fas fa-check"></i> Confirmar Compra
+                                        </a>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+            @endforeach
+
+    </div>
+</section>
+    <!--::doctor_part end::-->
+   <!-- banner part start-->
+   <section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-xl-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+
+                        <h5>Tu salud es nuestra prioridad</h5>
+                        <h1>Droguería La Economía</h1>
+                        <p>En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un servicio excepcional. Cuidamos de ti y tu familia.</p>
+                        <a href="#" class="btn_2">Comprar medicamentos</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="banner_img">
+                    <img src="{{ asset('frontend/img/banner_img.png')}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- banner part start-->
 <!-- ... (código anterior) ... -->
 <!-- Medicamentos section start -->
