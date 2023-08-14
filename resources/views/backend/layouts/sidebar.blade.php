@@ -143,12 +143,7 @@
                             <p>Listar pedidos</p>
                           </a>
                         </li>
-                        <li class="nav-item">
-                          <a href="{{route('pedidos.create')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Crear pedidos</p>
-                          </a>
-                        </li>
+                       
                     </ul>
                 </li>
             </ul>

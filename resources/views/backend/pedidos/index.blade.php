@@ -12,12 +12,13 @@
             <thead>
                 <tr>
                     <th>Pedido ID</th>
-                    <th>Medicamento ID</th>
-                    <th>Nombre del Medicamento</th>
+                    <th>Correo Electronico</th>
+                    <th>Telefono</th>
+                    <th>Informacion</th>
                     <th>Nombre del Cliente</th>
                     <th>Dirección de Envío</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
+                    <th>Productos</th>
+                    <th>Estado</th>
                     <th>Total</th>
                     <th>Fecha de Venta</th>
                     <th>Acción</th>
@@ -27,16 +28,18 @@
                 @foreach($pedidos as $pedido)
                     <tr>
                         <td>{{ $pedido->id }}</td>
-                        <td>{{ $pedido->medicamento_id }}</td>
-                        <td>{{ $pedido->nombre_medicamento }}</td>
+                        <td>{{ $pedido->email }}</td>
+
+                        <td>{{ $pedido->telefono }}</td>
+                        <td>{{ $pedido->informacion }}</td>
                         <td>{{ $pedido->nombre }}</td>
                         <td>{{ $pedido->direccion }}</td>
-                        <td>{{ $pedido->cantidad }}</td>
-                        <td>{{ $pedido->precio_medicamento }}</td>
+                        <td>{{ $pedido->productos }}</td>
+                        <td>{{ $pedido->status }}</td>
                         <td>{{ $pedido->total }}</td>
                         <td>{{ $pedido->created_at }}</td>
                         <td>
-                            <a href="{{ route('pedidos.edit', $pedido->id) }}" class="btn btn-primary btn-sm">Editar</a>
+                           <!-- <a href=" //route('pedidos.edit', $pedido->id) }}" class="btn btn-primary btn-sm">Editar</a> -->
                             <form action="{{ route('pedidos.destroy', $pedido->id) }}" method="post" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')

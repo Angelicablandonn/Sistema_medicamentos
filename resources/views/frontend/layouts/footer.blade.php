@@ -3,69 +3,30 @@
     <footer class="footer-area">
         <div class="footer section_padding">
             <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
-                        <a href="#" class="footer_logo"> <img src="{{ asset('frontend/img/logo.png') }}" alt="#"> </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                        <div class="social_logo">
+                <div class="row justify-content-between ">
+                    <div class="col-xl-4 col-md-4 mx-auto col-sm-6 single-footer-widget">
+                        <a href="#" class="footer_logo"> <img src="{{ asset('frontend/img/logo.jpg') }}" alt="#"> </a>
+                        <p class="text-justify my-1">En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un
+                            servicio excepcional. Cuidamos de ti y tu familia. </p>
+                        <div class="social_logo d-flex justify-content-center">
                             <a href="#"><i class="ti-facebook"></i></a>
                             <a href="#"> <i class="ti-twitter"></i> </a>
                             <a href="#"><i class="ti-instagram"></i></a>
                             <a href="#"><i class="ti-skype"></i></a>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
-                        <h4>Quick Links</h4>
+                    <div class="col-xl-4 col-sm-6 mx-auto col-md-4 single-footer-widget">
+                        <h4>Acceso Rapido</h4>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Department</a></li>
-                            <li><a href="#"> Online payment</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Department</a></li>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Medicamentos</a></li>
+                            <li><a href="#"> Redes</a></li>
+                            <li><a href="#">Contactanos</a></li>
                         </ul>
                     </div>
-                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
-                        <h4>Explore</h4>
-                        <ul>
-                            <li><a href="#">In the community</a></li>
-                            <li><a href="#">IU health foundation</a></li>
-                            <li><a href="#">Family support </a></li>
-                            <li><a href="#">Business solution</a></li>
-                            <li><a href="#">Community clinic</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Lights were season</a></li>
-                            <li><a href="#"> Their is let wherein</a></li>
-                            <li><a href="#">which given over</a></li>
-                            <li><a href="#">Without given She</a></li>
-                            <li><a href="#">Isn two signs think</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-md-6 single-footer-widget">
-                        <h4>Newsletter</h4>
-                        <p>Seed good winged wherein which night multiply
-                            midst does not fruitful</p>
-                        <div class="form-wrap" id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-                                    required="" type="email">
-                                <button class="click-btn btn btn-default text-uppercase"> <i
-                                        class="ti-angle-right"></i>
-                                </button>
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                        type="text">
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
+                    
+                 
+               
                 </div>
             </div>
         </div>
@@ -92,4 +53,5 @@
     <script src="{{ asset('frontend/js/contact.js') }}"></script>
     <!-- custom js -->
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 

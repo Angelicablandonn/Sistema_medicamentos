@@ -11,11 +11,16 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('email')->nullable();
+
             $table->string('direccion');
-            $table->integer('cantidad');
-            $table->unsignedBigInteger('medicamento_id');
-            $table->string('nombre_medicamento');
-            $table->decimal('precio_medicamento', 10, 2);
+            $table->integer('telefono');
+            $table->string('informacion');
+         
+            $table->enum('status',['En Proceso','Finalizado','Cancelado'])->default('En Proceso');
+
+            $table->string('productos');
+          
             $table->decimal('total', 10, 2);
             $table->timestamps();
 

@@ -36,7 +36,45 @@ input:hover, input:focus {
 .gray_bg {
   background-color: #f7f7f7;
 }
+.medicamento-img {
+  max-width: 100%;
+  height: 150px;
+  /* Establece la altura fija */
+  object-fit: cover;
+  /* Asegura que la imagen cubra el contenedor */
+}
+.color-s:hover{
+  background-color: #ff6637;
+}
+.color-e{
+  background-color: #ff6637;
+}
+.thick-vertical-bar {
+  border-right: 2px solid #000; /* Cambia el grosor y el color según tus preferencias */
+}
 
+.banner-s{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+a{
+  text-decoration: none;
+}
+.btn-agregar-carrito {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6637;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-agregar-carrito i {
+  margin-right: 5px;
+}
 /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
 .section_padding {
   padding: 140px 0px;
@@ -516,7 +554,7 @@ ul {
 
 /* line 40, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_button.scss */
 .btn_1:hover {
-  background-color: #0065e1 !important;
+  background-color: #ff6637 !important;
   color: #fff;
   background-size: 200% auto;
 }
@@ -581,7 +619,7 @@ ul {
   color: #fff;
   border: 1px solid #edeff2;
   text-transform: uppercase;
-  background-color: #0065e1;
+  background-color: #ff6637;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -611,7 +649,7 @@ ul {
 /* line 128, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_button.scss */
 .button-link:hover {
   background: transparent;
-  color: #3b1d82;
+  color: #ff6637;
 }
 
 /* line 134, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_button.scss */
@@ -652,7 +690,7 @@ ul {
 
 /* line 14, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 20, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
@@ -1158,7 +1196,7 @@ ul {
 
 /* line 540, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
 .blog_details a:hover {
-  color: #0065e1 !important;
+  color: #ff6637 !important;
 }
 
 /* line 545, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
@@ -1226,7 +1264,7 @@ ul {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #0065e1;
+  background-color: #ff6637;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -1447,9 +1485,9 @@ ul {
   font-size: 13px;
 }
 
-/* line 835, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
+/* line 835, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss #ff6637 juks #ff6637*/
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #0065e1;
+  background:  #ff6637;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -1697,7 +1735,7 @@ ul {
 
 /* line 1201, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: #0065e1;
+  color:  #ff6637;
 }
 
 /* line 1206, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog.scss */
@@ -2036,7 +2074,7 @@ ul {
 
 /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_single_blog.scss */
 .single_blog_post .single_blog .single_appartment_content p a {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 22, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_single_blog.scss */
@@ -2097,7 +2135,7 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #1c19ab;
+  background-color: #ff6637;
   opacity: 0.8;
   z-index: -1;
 }
@@ -2213,8 +2251,8 @@ ul {
 
 /* line 102, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_our_depertment.scss */
 .our_depertment .single_our_depertment:hover {
-  background-color: #0065e1;
-  border: 1px solid #0065e1;
+  background-color:  #ff6637;
+  border: 1px solid #ff6637;
 }
 
 /* line 106, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_our_depertment.scss */
@@ -2340,7 +2378,7 @@ ul {
 
 /* line 72, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_menu.scss */
 .main_menu .main-menu-item ul li .nav-link:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 81, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_menu.scss */
@@ -2375,7 +2413,7 @@ ul {
 
 /* line 106, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_menu.scss */
 .dropdown .dropdown-menu .dropdown-item:hover {
-  color: #0065e1 !important;
+  color: #ff6637 !important;
 }
 
 /* line 113, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_menu.scss */
@@ -2434,11 +2472,11 @@ ul {
   .dropdown:hover .dropdown-menu {
     transform: scale(1);
     display: block;
-    color: #0065e1;
+    color: #ff6637;
   }
   /* line 182, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_menu.scss */
   .dropdown .dropdown-item:hover {
-    color: #0065e1 !important;
+    color: #ff6637 !important;
   }
 }
 
@@ -2641,7 +2679,7 @@ ul {
 
 /* line 103, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_banner.scss */
 .banner_part .banner_text h1 span {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 108, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_banner.scss */
@@ -2843,7 +2881,7 @@ ul {
 /* line 106, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_about_us.scss */
 .about_us .about_us_text ul li span {
   margin-right: 10px;
-  color: #0065e1;
+  color: #ff6637;
   position: absolute;
   top: 16px;
   left: 0;
@@ -3676,7 +3714,7 @@ ul {
 
 /* line 34, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_doctor_list.scss */
 .doctor_part .single_blog_item .single_blog_img .social_icon a:hover {
-  color: #0065e1 !important;
+  color: #ff6637 !important;
 }
 
 /* line 42, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_doctor_list.scss */
@@ -3690,7 +3728,7 @@ ul {
 
 /* line 50, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_doctor_list.scss */
 .doctor_part .single_blog_item:hover h3 {
-  color: #0065e1 !important;
+  color: #ff6637!important;
 }
 
 @media (max-width: 991px) {
@@ -4012,7 +4050,7 @@ ul {
 
 /* line 38, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .single-footer-widget ul li a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 45, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
@@ -4044,7 +4082,7 @@ ul {
 
 /* line 75, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .single-footer-widget .click-btn {
-  background-color: #0065e1;
+  background-color: #ff6637;
   color: #fff;
   border-radius: 5px;
   border: 0;
@@ -4082,7 +4120,7 @@ ul {
 
 /* line 103, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .social_logo a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 108, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
@@ -4135,7 +4173,7 @@ ul {
 
 /* line 162, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part a {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 @media (max-width: 576px) {
@@ -4154,12 +4192,12 @@ ul {
 
 /* line 182, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part .footer-social a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 187, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part .footer-social a i:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 192, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
@@ -4193,7 +4231,7 @@ sup,
 sub,
 u,
 del {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 93, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
@@ -4360,28 +4398,28 @@ h1, h2, h3, h4, h5, h6 {
 /* line 217, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .genric-btn.primary {
   color: #fff;
-  background: #0065e1;
+  background: #ff6637;
   border: 1px solid transparent;
 }
 
 /* line 221, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .genric-btn.primary:hover {
-  color: #0065e1;
-  border: 1px solid #0065e1;
+  color: #ff6637
+  border: 1px solid #ff6637;
   background: #fff;
 }
 
 /* line 227, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .genric-btn.primary-border {
-  color: #0065e1;
-  border: 1px solid #0065e1;
+  color: #ff6637;
+  border: 1px solid #ff6637;
   background: #fff;
 }
 
 /* line 231, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #0065e1;
+  background: #ff6637;
   border: 1px solid transparent;
 }
 
@@ -4539,7 +4577,7 @@ h1, h2, h3, h4, h5, h6 {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #f9f9ff;
-  border-left: 2px solid #0065e1;
+  border-left: 2px solid #ff6637;
 }
 
 /* line 353, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
@@ -4694,7 +4732,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 3px solid #0065e1;
+  border: 3px solid #ff6637;
   background: #fff;
   top: 4px;
   left: 0;
@@ -4709,7 +4747,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 475, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .ordered-list li {
   list-style-type: decimal-leading-zero;
-  color: #0065e1;
+  color: #ff6637;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -4724,7 +4762,7 @@ h1, h2, h3, h4, h5, h6 {
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
-  color: #0065e1;
+  color: #ff6637;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -4739,7 +4777,7 @@ h1, h2, h3, h4, h5, h6 {
 .ordered-list-roman li {
   margin-left: 30px;
   list-style-type: lower-roman;
-  color: #0065e1;
+  color: #ff6637;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -4822,7 +4860,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 568, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .single-input-primary:focus {
   outline: none;
-  border: 1px solid #0065e1;
+  border: 1px solid #ff6637;
 }
 
 /* line 574, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
@@ -4890,7 +4928,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #0065e1;
+  background: #ff6637;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -4981,7 +5019,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 696, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .primary-switch input:checked + label:before {
-  background: #0065e1;
+  background: #ff6637;
 }
 
 /* line 704, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
@@ -5368,13 +5406,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1022, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .default-select .nice-select .list .option.selected {
-  color: #0065e1;
+  color: #ff6637;
   background: transparent;
 }
 
 /* line 1026, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .default-select .nice-select .list .option:hover {
-  color: #0065e1;
+  color: #ff6637;
   background: transparent;
 }
 
@@ -5431,13 +5469,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1067, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .form-select .nice-select .list .option.selected {
-  color: #0065e1;
+  color: #ff6637;
   background: transparent;
 }
 
 /* line 1071, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_elements.scss */
 .form-select .nice-select .list .option:hover {
-  color: #0065e1;
+  color: #ff6637;
   background: transparent;
 }
 
@@ -5610,7 +5648,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 10px;
   top: 5px;
   left: 0;
-  background-color: #0065e1;
+  background-color: #ff6637;
   border-radius: 50%;
 }
 
@@ -5699,7 +5737,7 @@ h1, h2, h3, h4, h5, h6 {
 .blog_part .single-home-blog .card h5:hover {
   -webkit-transition: 0.8s;
   transition: 0.8s;
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 162, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog_part.scss */
@@ -5782,12 +5820,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 217, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog_part.scss */
 .blog_part .blog_btn:hover {
-  color: #0065e1 !important;
+  color: #ff6637 !important;
 }
 
 /* line 219, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_blog_part.scss */
 .blog_part .blog_btn:hover:after {
-  background-color: #0065e1;
+  background-color: #ff6637;
 }
 
 /*=================== contact banner start ====================*/
@@ -5817,7 +5855,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 23, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_contact.scss */
 .contact-info .media-body h3 a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 29, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_contact.scss */
@@ -6086,7 +6124,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 38, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .single-footer-widget ul li a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 45, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
@@ -6118,7 +6156,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 75, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .single-footer-widget .click-btn {
-  background-color: #0065e1;
+  background-color: #ff6637;
   color: #fff;
   border-radius: 5px;
   border: 0;
@@ -6156,7 +6194,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 103, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .social_logo a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 108, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
@@ -6209,7 +6247,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 162, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part a {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 @media (max-width: 576px) {
@@ -6228,12 +6266,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 182, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part .footer-social a:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 187, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */
 .footer-area .copyright_part .footer-social a i:hover {
-  color: #0065e1;
+  color: #ff6637;
 }
 
 /* line 192, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_footer.scss */

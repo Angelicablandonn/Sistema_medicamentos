@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Medicamento;
+use App\Models\Pedido;
+use App\Models\User; // Asegúrate de importar el modelo User
+use Illuminate\Support\Facades\Hash; // Asegúrate de importar la clase Hash
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -14,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['inicio', 'register','registerSubmit']);
     }
 
     /**
@@ -31,6 +35,29 @@ class HomeController extends Controller
         $medicamentos=Medicamento::orderBy('id')->get();
 
         return view('frontend.index')->with('medicamentos',$medicamentos);
+
+}
+public function inicio(){
+    $medicamentos=Medicamento::orderBy('id')->get();
+
+    return view('frontend.index')->with('medicamentos',$medicamentos);
+
+}
+public function profile(){
+    $userEmail = Auth()->user()->email;
+    $pedidos = Pedido::where('email', $userEmail)->orderBy('created_at', 'desc')->get();
+
+    return view('frontend.profile')->with('pedidos', $pedidos);
+
+}
+public function about(){
+
+    return view('frontend.about');
+
+}
+public function contact(){
+
+    return view('frontend.contact');
 
 }
 public function login(){
@@ -53,32 +80,39 @@ public function logout(){
     Session::forget('user');
     Auth::logout();
     request()->session()->flash('success','Logout successfully');
-    return back();
+    return redirect()->route('inicio');
 }
 
 public function register(){
-    return view('frontend.pages.register');
+    return view('auth.register');
 }
-public function registerSubmit(Request $request){
-    // return $request->all();
-    $this->validate($request,[
-        'name'=>'string|required|min:2',
-        'email'=>'string|required|unique:users,email',
-        'password'=>'required|min:6|confirmed',
+// HomeController.php
+
+public function registerSubmit(Request $request)
+{
+    // Validar los datos del formulario de registro
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|unique:users|max:255',
+        'password' => 'required|string|min:6|confirmed',
     ]);
-    $data=$request->all();
-    // dd($data);
-    $check=$this->create($data);
-    Session::put('user',$data['email']);
-    if($check){
-        request()->session()->flash('success','Successfully registered');
-        return redirect()->route('home');
-    }
-    else{
-        request()->session()->flash('error','Please try again!');
-        return back();
-    }
+
+    // Crear el nuevo usuario
+    $user = $this->create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'password' => $request->password,
+    ]);
+
+    // Autenticar al usuario después de registrarse
+    Auth::login($user);
+
+    // Redireccionar a la página de inicio o perfil del usuario
+    return redirect()->route('inicio')->with('success', 'Registro exitoso. Bienvenido/a.');
 }
+
+// Resto de métodos en el controlador...
+
 public function create(array $data){
     return User::create([
         'name'=>$data['name'],
