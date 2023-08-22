@@ -51,7 +51,7 @@
                <td>{{ $medicamento->detalles }}</td>
                <td>{{ $medicamento->fecha_vencimiento }}</td>
                <td>{{ $medicamento->lote }}</td>
-               <td>{{ $medicamento->cat_info['title'] }}</td>
+               <td>{{ @$medicamento->cat_info['title'] }}</td>
                <td>{{ $medicamento->slug }}</td>
                <td>{{ $medicamento->registro_invima }}</td>
                <td>

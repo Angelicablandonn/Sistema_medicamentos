@@ -191,7 +191,7 @@ class MedicamentosController extends Controller
      */
     public function edit(string $id)
     {
-        $categories = Category::where('is_parent', 1)->get();
+        $categories=Category::all();
         $medicamentos = Medicamento::findOrFail($id);
 
         return view('backend.medicamento.edit', [

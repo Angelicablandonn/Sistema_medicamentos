@@ -35,7 +35,18 @@ class HomeController extends Controller
         return redirect()->route($request->user()->role);
 
          }
+<<<<<<< HEAD
 
+=======
+         public function home(){
+            $banners = Banner::orderBy('id')->get();
+            $medicamentos = Medicamento::where('status', 'active')->orderBy('id')->get();
+    
+    
+            return view('frontend.index')->with('medicamentos',$medicamentos)->with('banners', $banners);;
+    
+    }
+>>>>>>> bcc4797 (Version Estable)
 public function inicio()
 {
     $banners = Banner::orderBy('id')->get();
