@@ -29,8 +29,10 @@
 
                                         <td>
                                             @if($banner->image_path)
-                                                <img src="{{ asset('images/banners' . $banner->image_path) }}" class="img-fluid zoom" style="max-width:100%" alt="">
-                                            @else
+
+                                            <img src="{{ asset('images/banners/' . $banner->image_path) }}" class="img-fluid zoom" style="max-width:100%; width: 300px; height: auto;" alt="">
+
+                                              @else
                                                 <img src="{{ asset('backend/img/thumbnail-default.jpg') }}" class="img-fluid zoom" style="max-width:100%" alt="avatar.png">
                                             @endif
                                         </td>

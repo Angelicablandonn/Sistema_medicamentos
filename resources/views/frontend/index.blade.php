@@ -1,5 +1,82 @@
 @extends('frontend.layouts.master')
 @section('content')
+
+
+<!-- banner part start-->
+@if(count($banners) > 0)
+<section class="banner_part" style="position: relative; overflow: hidden;">
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-xl-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        @foreach ($banners as $index => $banner)
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
+                        @endforeach
+                    </ol>
+                    <div class="carousel-inner">
+                        @foreach ($banners as $index => $banner)
+                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                <img class="d-block w-100" src="{{ asset('images/banners/' . $banner->image_path) }}" alt="Banner {{ $index + 1 }}">
+                            </div>
+                        @endforeach
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="banner_text" style="position: relative; z-index: 1; background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
+                    <div class="banner_text_iner">
+                        <h5>Tu salud es nuestra prioridad</h5>
+                        <h1>Droguería La Economía</h1>
+                        <p>En Droguería La Economía, nos dedicamos a brindarte productos farmacéuticos de calidad y un
+                            servicio excepcional. Cuidamos de ti y tu familia.</p>
+                        <a href="#" class="btn_2">Comprar medicamentos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+<!-- banner part end-->
+
+<style>
+    .banner_part {
+        position: relative;
+        overflow: hidden;
+        padding: 50px 0; /* Ajusta este valor para controlar el espacio vertical entre el carrusel y el texto */
+        margin-top: -200px; /* Ajusta este valor para controlar la distancia entre el banner y el nav */
+    }
+
+    .banner_text {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        margin-top: -80px; /* Ajusta este valor para alinear el texto con la imagen del carrusel */
+    }
+
+    /* Añadir margen inferior a la imagen del carrusel */
+    .carousel-inner .carousel-item img {
+        margin-bottom: -30px; /* Ajusta este valor para subir o bajar la imagen */
+    }
+
+    .doctor_part {
+        padding-bottom: 300px; /* Ajusta este valor para controlar el espacio vertical inferior del doctor_part */
+    }
+</style>
+
+
+
     <section class="doctor_part section_padding">
         <div class="container">
             <div class="row justify-content-center">
@@ -35,8 +112,8 @@
                                     <button class="btn btn-agregar-carrito" data-medicamento-id="{{ $medicamento->id }}">
                                         <i class="ti-shopping-cart"></i> Agregar al carrito
                                     </button>
-                                   
-                                    
+
+
                                 </div>
                             </div>
 
@@ -226,11 +303,15 @@
                 </div>
             </div>
         </div>
-        
+
 
     </section>
     <script>
         var medicamentos = @json($medicamentos);
+        $(document).ready(function () {
+        // Inicializar el carrusel
+        $('#bannerCarousel').carousel();
+    });
     </script>
 <style>
     .btn-agregar-carrito {

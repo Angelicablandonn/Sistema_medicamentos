@@ -23,7 +23,7 @@
                                 <a class="nav-link" href="{{ route('about') }}">Acerca de</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('inicio') }}">Medicamentos</a>
+                                <a class="nav-link" href="{{ route('medicine') }}">Medicamentos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
@@ -82,8 +82,8 @@
                                     <div id="carritoContent"></div>
                                     <hr>
                                 <div class="col d-flex justify-content-center"><div id="totalCarrito" class=""></div>  </div>
-                                    
-                                    
+
+
                                 <div class="col d-flex justify-content-center"><button class="btn my-1 btn-danger btn-vaciar-carrito"><i class="fas fa-trash"></i> Vaciar Carrito</button></div>
                                     <div class="col d-flex justify-content-center">  <button class="btn my-1 btn-success btn-confirmar-pedido " data-bs-toggle="modal" data-bs-target="#confirmarPedidoModal"><i class="fas fa-check-circle"></i> Confirmar Pedido</button></div>
                                 </div>
@@ -92,8 +92,8 @@
                     </div>
                     @endauth
                     @guest
-            
-      
+
+
                 @endguest
                 </nav>
             </div>
@@ -159,12 +159,12 @@
                         <div class="col d-flex justify-content-center"> <div id="totalCarritoS" class=""></div></div>
                     </div>
                  </div>
-                   
-             
-                 <input type="hidden" name="carrito" id="carritoInput">
-       
 
-                    
+
+                 <input type="hidden" name="carrito" id="carritoInput">
+
+
+
                     @csrf
                 </form>
             </div>
@@ -176,5 +176,5 @@
     </div>
 </div>
 @endauth
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{ asset('frontend/js/carrito.js') }}"></script>

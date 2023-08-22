@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use App\Models\Medicamento;
+use App\Models\Category;
 use App\Models\Pedido;
 use App\Models\User; // Asegúrate de importar el modelo User
 use Illuminate\Support\Facades\Hash; // Asegúrate de importar la clase Hash
@@ -32,17 +34,21 @@ class HomeController extends Controller
 
          }
     public function home(){
-        $medicamentos=Medicamento::orderBy('id')->get();
+        $banners = Banner::orderBy('id')->get();
+        $medicamentos = Medicamento::where('status', 'active')->orderBy('id')->get();
+
 
         return view('frontend.index')->with('medicamentos',$medicamentos);
 
 }
-public function inicio(){
-    $medicamentos=Medicamento::orderBy('id')->get();
+public function inicio()
+{
+    $banners = Banner::orderBy('id')->get();
+    $medicamentos = Medicamento::where('status', 'active')->orderBy('id')->get();
 
-    return view('frontend.index')->with('medicamentos',$medicamentos);
-
+    return view('frontend.index')->with('medicamentos', $medicamentos)->with('banners', $banners);
 }
+
 public function profile(){
     $userEmail = Auth()->user()->email;
     $pedidos = Pedido::where('email', $userEmail)->orderBy('created_at', 'desc')->get();
@@ -53,6 +59,18 @@ public function profile(){
 public function about(){
 
     return view('frontend.about');
+
+}
+public function category($id)
+{
+    $category = Category::findOrFail($id);
+    return view('frontend.category', compact('category'));
+}
+public function medicine(){
+    $medicamentos = Medicamento::where('status', 'active')->orderBy('id')->get();
+
+    $categories=Category::orderBy('id')->get();
+    return view('frontend.medicine')->with('medicamentos',$medicamentos)->with('categories',$categories);
 
 }
 public function contact(){
