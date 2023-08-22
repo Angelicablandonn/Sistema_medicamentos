@@ -38,7 +38,7 @@
                                         </td>
 
                                         <td>
-                                            <a href="{{route('banner.edit', $banner->id) }}" class="btn btn-primary btn-sm">Editar</a>
+
                                             <form action="{{ route('banner.destroy', $banner->id) }}" method="post" style="display: inline-block">
                                                 @csrf
                                                 @method('DELETE')

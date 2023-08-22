@@ -13,7 +13,7 @@
                         <input type="number" name="min_price" placeholder="Precio Mínimo">
                         <input type="number" name="max_price" placeholder="Precio Máximo">
                         <p>Categorías</p>
-                        <select name="categoria">
+                        <select name="categoria" class="my-2">
                             <option value="">Todas las Categorías</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->title }}</option>

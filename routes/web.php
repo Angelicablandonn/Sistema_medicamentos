@@ -3,8 +3,10 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MedicamentosController;
 use App\Http\Controllers\AdminController;
-
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Mail\RegistroUsuario;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,8 @@ Route::get('profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('medicine', [HomeController::class, 'medicine'])->name('medicine');
+Route::get('mail', [HomeController::class, 'mail'])->name('mail');
+
 Route::post('confirmar-pedido', [App\Http\Controllers\PedidoController::class, 'confirmarPedido'])->name('confirmar-pedido');;
 
 Route::get('/category/{id}', [HomeController::class, 'category'])->name('frontend.category');

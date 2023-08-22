@@ -30,7 +30,7 @@
                 <a href="{{ route('facturas.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-file-invoice"></i>
                     <p>Facturación</p>
-                    <span class="right badge badge-danger">Nuevo</span>
+                    
                 </a>
             </li>
 
@@ -91,7 +91,7 @@
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-image"></i>
-                    <p>Banners <i class="fas fa-angle-left right"></i></p>
+                    <p>Banners     <span class="right badge badge-danger">Nuevo</span><i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -113,7 +113,7 @@
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-list"></i>
-                    <p>Categorías <i class="fas fa-angle-left right"></i></p>
+                    <p>Categorías     <span class="right badge badge-danger">Nuevo</span><i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">

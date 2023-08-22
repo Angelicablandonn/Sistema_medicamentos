@@ -3,7 +3,7 @@
 
 
 <!-- banner part start-->
-@if(count($banners) > 0)
+@if(count(@$banners) > 0)
 <section class="banner_part" style="position: relative; overflow: hidden;">
 
     <div class="container">
@@ -92,7 +92,7 @@
             <div class="row">
                 <div id="medicaments"></div>
                 @foreach ($medicamentos as $medicamento)
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-3  d-flex justify-content-center ">
                         <div class="single_blog_item">
                             <div class="single_blog_img">
                                 @if ($medicamento->imagen)
@@ -104,16 +104,18 @@
                                 @endif
 
                             </div>
-                            <div class="single_text">
+                            <div class="single_text ">
                                 <div class="single_blog_text">
                                     <h3>{{ $medicamento->nombre }}</h3>
                                     <p class="precio my-3">Precio: {{ $medicamento->precio }} $</p>
 
-                                    <button class="btn btn-agregar-carrito" data-medicamento-id="{{ $medicamento->id }}">
-                                        <i class="ti-shopping-cart"></i> Agregar al carrito
-                                    </button>
-
-
+                                    <div class="col d-flex justify-content-center">
+                                        <button class="btn btn-agregar-carrito " data-medicamento-id="{{ $medicamento->id }}">
+                                            <i class="ti-shopping-cart"></i> Agregar al carrito
+                                        </button>
+                                    </div>
+                                   
+                                    
                                 </div>
                             </div>
 
@@ -317,16 +319,25 @@
     .btn-agregar-carrito {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff6637;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
+  background-color: #fff;
+  color: #ff6637;
+  border-color: #ff6637;
+  border-style:solid;  
+        
+
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
 }
 
 .btn-agregar-carrito i {
   margin-right: 5px;
+}
+
+.btn-agregar-carrito:hover{
+    background-color: #ff6637;
+    border-color: #000;
+
 }
 </style>
 @endsection

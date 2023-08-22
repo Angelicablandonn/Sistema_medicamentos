@@ -8,8 +8,7 @@
     }
 
     .profile-card {
-        border: 1px solid #ccc;
-        border-radius: 5px;
+    
         padding: 20px;
         margin-bottom: 20px;
         display: flex;
@@ -28,9 +27,6 @@
         font-size: 36px;
     }
 
-    .profile-info {
-        padding-left: 20px;
-    }
 
     .profile-options {
         list-style: none;
@@ -86,31 +82,33 @@
 </div>
 
 @auth
-<div class="profile-container">
-    <div class="row py-5 my-5 mx-4">
-        <div class="col-md-6 profile-card">
-            <div class="profile-icon">
-                <i class="fas fa-user"></i>
+
+  
+
+    
+    <div class="row my-5">
+        <div class="col-md-7   px-4 profile-card">
+            <div class="row mx-5 border-right d-flex justify-content-center align-items-center">
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class=" col ">
+                    <h5>Nombre Completo: {{ Auth()->user()->name }}</h5>
+                    <p>Correo Electronico: {{ Auth()->user()->email }}</p>
+                </div>
             </div>
-            <div class="profile-info">
-                <h5>Nombre Completo: {{ Auth()->user()->name }}</h5>
-                <p>Correo Electronico: {{ Auth()->user()->email }}</p>
+            <div class="row py-5 my-5 mx-4">
+                <h5>Opciones:</h5>
+                <ul class="profile-options">
+                    <li><button onclick="showMenu('perfil')">Ver Pedidos</button></li>
+                    <li><button onclick="showMenu('password')">Cambiar Contraseña</button></li>
+                    <li><button onclick="showMenu('config')">Configurar Cuenta</button></li>
+                    <li><button onclick="showMenu('logout')">Cerrar Sesión</button></li>
+                </ul>
             </div>
         </div>
-        <div class="col-md-6 profile-card">
-            <h5>Opciones:</h5>
-            <ul class="profile-options">
-                <li><button onclick="showMenu('perfil')">Ver Pedidos</button></li>
-                <li><button onclick="showMenu('password')">Cambiar Contraseña</button></li>
-                <li><button onclick="showMenu('config')">Configurar Cuenta</button></li>
-                <li><button onclick="showMenu('logout')">Cerrar Sesión</button></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col p-3 d-flex justify-content-center">
-
+        <div class="col-md-5 p-3  my-5 d-flex border-left justify-content-center align-items-center">
+    
             <div id="perfilMenu" class="profile-menu">
                 <div class="card">
                     <div class="card-header">
@@ -142,20 +140,20 @@
                     </div>
                 </div>
             </div>
-
+    
             <div id="passwordMenu" class="profile-menu">
                 <h6>Cambiar Contraseña</h6>
                 <form>
                     <!-- Formulario para cambiar contraseña -->
                 </form>
             </div>
-
+    
             <div id="configMenu" class="profile-menu">
-                <h6>Perfil del Usuario</h6>
+                <h4><b>Perfil del Usuario</b></h4>
                 <p>Nombre: {{ Auth()->user()->name }}</p>
                 <p>Correo electrónico: {{ Auth()->user()->email }}</p>
             </div>
-
+    
             <div id="logoutMenu" class="profile-menu">
                 <h4 class="d-flex justify-content-center">Cerrar Sesión</h4>
                 <p>¿Estás seguro de que deseas cerrar sesión?</p>
@@ -166,7 +164,12 @@
             </div>
         </div>
     </div>
-</div>
+   
+
+    <div class="row">
+      
+    </div>
+
 
 <script>
     function showMenu(menuId) {
