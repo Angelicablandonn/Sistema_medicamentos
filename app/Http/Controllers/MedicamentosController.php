@@ -88,9 +88,9 @@ class MedicamentosController extends Controller
      */
     public function create()
     {
-        $category=Category::where('is_parent',1)->get();
+        $categories=Category::all();
 
-        return view('backend.medicamento.create')->with('categories',$category);
+        return view('backend.medicamento.create')->with('categories',$categories);
     }
 
 
