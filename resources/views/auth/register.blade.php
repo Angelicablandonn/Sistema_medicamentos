@@ -26,12 +26,40 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo Electronico:') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo Electrónico:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Teléfono:') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Dirección:') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+
+                                @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -54,7 +82,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Contraseña') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Contraseña:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -62,17 +90,16 @@
                         </div>
 
                         <div class="row my-3 ">
-                       
-                           
-                            <label for="password-confirm" class=" col d-flex justify-content-center"> <input type="checkbox" id="terminos" name="terminos" class="mx-2" required>    Acepto los términos y condiciones</label>
-
-
+                            <label for="terminos" class="col d-flex justify-content-center">
+                                <input type="checkbox" id="terminos" name="terminos" class="mx-2" required>
+                                Acepto los términos y condiciones
+                            </label>
                         </div>
-                      
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrate') }}
+                                    {{ __('Registrarse') }}
                                 </button>
                             </div>
                         </div>
@@ -83,3 +110,4 @@
     </div>
 </div>
 @endsection
+

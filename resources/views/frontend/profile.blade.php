@@ -8,7 +8,7 @@
     }
 
     .profile-card {
-    
+
         padding: 20px;
         margin-bottom: 20px;
         display: flex;
@@ -83,9 +83,9 @@
 
 @auth
 
-  
 
-    
+
+
     <div class="row my-5">
         <div class="col-md-7   px-4 profile-card">
             <div class="row mx-5 border-right d-flex justify-content-center align-items-center">
@@ -95,6 +95,8 @@
                 <div class=" col ">
                     <h5>Nombre Completo: {{ Auth()->user()->name }}</h5>
                     <p>Correo Electronico: {{ Auth()->user()->email }}</p>
+                    <p>Teléfono: {{ Auth()->user()->phone }}</p>
+                    <p>Dirección: {{ Auth()->user()->address }}</p>
                 </div>
             </div>
             <div class="row py-5 my-5 mx-4">
@@ -108,7 +110,7 @@
             </div>
         </div>
         <div class="col-md-5 p-3  my-5 d-flex border-left justify-content-center align-items-center">
-    
+
             <div id="perfilMenu" class="profile-menu">
                 <div class="card">
                     <div class="card-header">
@@ -140,20 +142,22 @@
                     </div>
                 </div>
             </div>
-    
+
             <div id="passwordMenu" class="profile-menu">
                 <h6>Cambiar Contraseña</h6>
                 <form>
                     <!-- Formulario para cambiar contraseña -->
                 </form>
             </div>
-    
+
             <div id="configMenu" class="profile-menu">
                 <h4><b>Perfil del Usuario</b></h4>
                 <p>Nombre: {{ Auth()->user()->name }}</p>
                 <p>Correo electrónico: {{ Auth()->user()->email }}</p>
+                <p>Teléfono: {{ Auth()->user()->phone }}</p>
+                <p>Dirección: {{ Auth()->user()->address }}</p>
             </div>
-    
+
             <div id="logoutMenu" class="profile-menu">
                 <h4 class="d-flex justify-content-center">Cerrar Sesión</h4>
                 <p>¿Estás seguro de que deseas cerrar sesión?</p>
@@ -164,10 +168,10 @@
             </div>
         </div>
     </div>
-   
+
 
     <div class="row">
-      
+
     </div>
 
 

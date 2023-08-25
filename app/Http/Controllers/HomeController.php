@@ -35,18 +35,16 @@ class HomeController extends Controller
         return redirect()->route($request->user()->role);
 
          }
-<<<<<<< HEAD
 
-=======
          public function home(){
             $banners = Banner::orderBy('id')->get();
             $medicamentos = Medicamento::where('status', 'active')->orderBy('id')->get();
-    
-    
+
+
             return view('frontend.index')->with('medicamentos',$medicamentos)->with('banners', $banners);;
-    
+
     }
->>>>>>> bcc4797 (Version Estable)
+
 public function inicio()
 {
     $banners = Banner::orderBy('id')->get();
@@ -86,7 +84,7 @@ public function contact(){
 }
 public function login(){
     if (Auth::check()) {
-        return redirect()->route('inicio'); 
+        return redirect()->route('inicio');
     }
     return view('frontend.pages.login');
 }
@@ -112,7 +110,7 @@ public function logout(){
 
 public function register(){
     if (Auth::check()) {
-        return redirect()->route('inicio'); 
+        return redirect()->route('inicio');
     }
     return view('auth.register');
 }
@@ -148,9 +146,9 @@ public function registerSubmit(Request $request)
 }
 public function mail()
 {
-    
+
    return new RegistroUsuario("Carrion");
-  
+
 }
 // Resto de métodos en el controlador...
 

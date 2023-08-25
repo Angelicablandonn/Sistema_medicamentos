@@ -80,3 +80,29 @@ $(function () {
       $('.alert').slideUp();
     },4000);
   </script>
+
+<script>
+    $(document).ready(function() {
+        // Activa el colapso del menú de la barra lateral
+        $('[data-widget="treeview"]').Treeview('init');
+
+        // Controla el colapso del menú cuando se hace clic en los elementos con la clase 'nav-link'
+        $('.nav-link').on('click', function(e) {
+            e.preventDefault();
+            var $navTreeView = $('.nav-treeview');
+
+            // Oculta todos los submenús
+            $navTreeView.slideUp();
+
+            // Muestra el submenú correspondiente
+            $(this).next('.nav-treeview').slideDown();
+             // Oculta todos los submenús
+
+
+        }
+         // Oculta todos los submenús
+
+);
+    });
+</script>
+
