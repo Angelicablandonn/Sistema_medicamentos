@@ -150,9 +150,7 @@
     </nav>
     <!-- /.sidebar-menu -->
 </div>
-<div class="sidebar">
-    <!-- ... (Código del menú y otros elementos) ... -->
-</div>
+
 
 
 

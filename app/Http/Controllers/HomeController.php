@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash; // Asegúrate de importar la clase Hash
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
     /**
@@ -88,18 +89,36 @@ public function login(){
     }
     return view('frontend.pages.login');
 }
-public function loginSubmit(Request $request){
-    $data= $request->all();
-    if(Auth::attempt(['email' => $data['email'], 'password' => $data['password'],'status'=>'active'])){
-        Session::put('user',$data['email']);
-        request()->session()->flash('success','Successfully login');
-        return redirect()->route('inicio');
+
+
+
+
+
+    public function changePassword(Request $request)
+    {
+        $user = Auth::user(); // Obtener el usuario autenticado
+
+        // Validar los datos del formulario de cambio de contraseña
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required|min:6|confirmed',
+        ]);
+
+        // Verificar que la contraseña actual sea correcta
+        if (Hash::check($request->current_password, $user->password)) {
+            // Cambiar la contraseña
+            $user->update([
+                'password' => Hash::make($request->new_password),
+            ]);
+
+            return redirect()->back()->with('success', 'Contraseña cambiada exitosamente.');
+        } else {
+            return redirect()->back()->withErrors(['current_password' => 'La contraseña actual es incorrecta.']);
+        }
     }
-    else{
-        request()->session()->flash('error','Invalid email and password pleas try again!');
-        return redirect()->back();
-    }
-}
+
+
+
 
 public function logout(){
     Session::forget('user');
@@ -114,6 +133,20 @@ public function register(){
     }
     return view('auth.register');
 }
+public function updateProfile(Request $request)
+{
+    $user = Auth::user();
+
+    $user->update([
+        'name' => $request->name,
+        'email' => $request->email,
+        'phone' => $request->phone,
+        'address' => $request->address,
+    ]);
+
+    return redirect()->back()->with('success', 'Perfil actualizado exitosamente.');
+}
+
 // HomeController.php
 
 public function registerSubmit(Request $request)

@@ -15,6 +15,8 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="{{asset('backend/assets/plugins/jquery/jquery.min.js')  }}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('backend/assets/plugins/jquery-ui/jquery-ui.min.js')  }}"></script>
@@ -81,28 +83,23 @@ $(function () {
     },4000);
   </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // Activa el colapso del menú de la barra lateral
-        $('[data-widget="treeview"]').Treeview('init');
+        // Manejar clic en los elementos del menú
+        $('.nav-item a.nav-link').on('click', function() {
+            // Remover clase 'active' de todos los elementos
+            $('.nav-item a.nav-link').removeClass('active');
 
-        // Controla el colapso del menú cuando se hace clic en los elementos con la clase 'nav-link'
-        $('.nav-link').on('click', function(e) {
-            e.preventDefault();
-            var $navTreeView = $('.nav-treeview');
+            // Agregar clase 'active' al elemento actual
+            $(this).addClass('active');
 
-            // Oculta todos los submenús
-            $navTreeView.slideUp();
-
-            // Muestra el submenú correspondiente
-            $(this).next('.nav-treeview').slideDown();
-             // Oculta todos los submenús
-
-
-        }
-         // Oculta todos los submenús
-
-);
+            // Cerrar menú desplegable si está abierto
+            if ($(this).closest('.has-treeview').length === 0) {
+                $('body').removeClass('sidebar-open');
+            }
+        });
     });
 </script>
+
 
