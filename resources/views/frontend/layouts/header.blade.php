@@ -74,8 +74,7 @@
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="ti-shopping-cart"> <span id="cartBadge" class="cart-badge">0</span></i> Mi Carrito
                                         </button>
-                                        <div id="carritoDrop" class="dropdown-menu carritos"
-                                            aria-labelledby="carritoDropdown">
+                                        <div id="carritoDrop" class="dropdown-menu carritos" aria-labelledby="carritoDropdown"             aria-labelledby="carritoDropdown">
                                             <div class="card mt-4">
                                                 <div class="card-header d-flex justify-content-center">
                                                     Carrito de Compras
@@ -108,7 +107,7 @@
                             @endguest
                         </ul>
                     </div>
-                    
+
                 </nav>
             </div>
         </div>
@@ -127,12 +126,13 @@
 
     .carritos {
         width: 42vh;
+        overflow-y: auto;
         /* Ajusta el ancho de la tarjeta según tus preferencias */
     }
     .cart-badge {
     position: absolute;
     top: 0;
-    
+
     left: 15%;
     background-color: red;
     color: white;
@@ -152,7 +152,7 @@
     <div class="modal fade" id="confirmarPedidoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
 
-            
+
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Confirmar Pedido</h5>
@@ -206,10 +206,20 @@
                         <button type="submit" class="btn btn-primary" id="enviarPedidoBtn">Enviar Pedido</button>
                     </div>
                     </form>
-                
+
             </div>
         </div>
     </div>
 @endauth
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="module" src="{{ asset('frontend/js/carrito.js') }}"></script>
+<script>
+
+
+// Evitar que el menú se cierre al quitar el mouse
+document.getElementById('carritoDrop').addEventListener('mouseleave', function(e) {
+    e.stopPropagation();
+});
+
+
+</script>
