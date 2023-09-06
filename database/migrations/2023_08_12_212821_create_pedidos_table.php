@@ -10,18 +10,21 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('medicamento_id');
-            $table->string('nombre_medicamento');
-            $table->unsignedInteger('cantidad');
-            $table->decimal('precio_unitario', 10, 2);
+            $table->string('nombre');
+            $table->string('email')->nullable();
+
+            $table->string('direccion');
+            $table->integer('telefono');
+            $table->string('informacion')->nullable();
+         
+            $table->enum('status',['En Proceso','Finalizado','Cancelado'])->default('En Proceso');
+
+            $table->string('productos');
+          
             $table->decimal('total', 10, 2);
             $table->timestamps();
 
-            $table->foreign('medicamento_id')->references('id')->on('medicamentos');
-            $table->foreign('nombre_medicamento')->references('nombre')->on('medicamentos');
-
-            $table->date('fecha_venta')->nullable();
-        });
+                 });
     }
 
     public function down()
@@ -29,3 +32,4 @@ class CreatePedidosTable extends Migration
         Schema::dropIfExists('pedidos');
     }
 }
+

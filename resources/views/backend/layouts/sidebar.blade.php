@@ -2,8 +2,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="{{ asset('backend/assets/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                alt="User Image">
+            <img src="{{ asset('backend/assets/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
             <a href="#" class="d-block">Administrador</a>
@@ -25,27 +24,30 @@
     <!-- Sidebar Menu -->
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-             with font-awesome or any other icon font library -->
 
+            <!-- Facturación -->
             <li class="nav-item">
-                <a href="{{ route('ventas.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
-                    <p>
-                        Facturacion
+                <a href="{{ route('facturas.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-file-invoice"></i>
+                    <p>Facturación</p>
 
-
-                    </p>  <span class="right badge badge-danger">Nuevo</span>
                 </a>
             </li>
 
+            <!-- Ventas -->
             <li class="nav-item">
+                <a href="{{ route('ventas.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-shopping-cart"></i>
+                    <p>Ventas</p>
+                    <span class="right badge badge-danger">Nuevo</span>
+                </a>
+            </li>
+
+            <!-- Usuarios -->
+            <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-edit"></i>
-                    <p>
-                        Usuarios
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>Usuarios <i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -60,17 +62,14 @@
                             <p>Agregar Usuarios</p>
                         </a>
                     </li>
-
                 </ul>
             </li>
 
-            <li class="nav-item">
+            <!-- Medicamentos -->
+            <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-edit"></i>
-                    <p>
-                        Medicamentos
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
+                    <i class="nav-icon fas fa-medkit"></i>
+                    <p>Medicamentos <i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -85,39 +84,73 @@
                             <p>Agregar Medicamentos</p>
                         </a>
                     </li>
-
-
                 </ul>
             </li>
-            <li class="nav-item">
+
+            <!-- Banners -->
+            <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-edit"></i>
-                    <p>
-                        Pedidos
-
-                        <i class="fas fa-angle-left right"></i>
-
-                    </p>
+                    <i class="nav-icon fas fa-image"></i>
+                    <p>Banners     <span class="right badge badge-danger">Nuevo</span><i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="{{route('pedidos.index')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Listar pedidos</p>
-                      </a>
+                        <a href="{{ route('banner.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Listar Banners</p>
+                        </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{route('pedidos.create')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Crear pedidos</p>
-                      </a>
+                        <a href="{{ route('banner.create') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Agregar Banners</p>
+                        </a>
                     </li>
-
-                  </ul>
+                </ul>
             </li>
 
+            <!-- Categorías -->
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-list"></i>
+                    <p>Categorías     <span class="right badge badge-danger">Nuevo</span><i class="fas fa-angle-left right"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('categories.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Listar Categorías</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('categories.create') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Agregar Categorías</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
+            <!-- Pedidos -->
+            <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-clipboard-list"></i>
+                    <p>Pedidos <i class="fas fa-angle-left right"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('pedidos.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Listar Pedidos</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
 </div>
+
+
+
+

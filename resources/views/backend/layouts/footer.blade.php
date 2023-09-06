@@ -15,6 +15,8 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="{{asset('backend/assets/plugins/jquery/jquery.min.js')  }}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('backend/assets/plugins/jquery-ui/jquery-ui.min.js')  }}"></script>
@@ -80,3 +82,24 @@ $(function () {
       $('.alert').slideUp();
     },4000);
   </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Manejar clic en los elementos del menú
+        $('.nav-item a.nav-link').on('click', function() {
+            // Remover clase 'active' de todos los elementos
+            $('.nav-item a.nav-link').removeClass('active');
+
+            // Agregar clase 'active' al elemento actual
+            $(this).addClass('active');
+
+            // Cerrar menú desplegable si está abierto
+            if ($(this).closest('.has-treeview').length === 0) {
+                $('body').removeClass('sidebar-open');
+            }
+        });
+    });
+</script>
+
+
